@@ -10,6 +10,9 @@
   "env": {
     "production": {
       "presets": ["minify"]
+    },
+    "test": {
+      "presets": ["env", "react"]
     }
   }
 }
