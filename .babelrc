@@ -1,0 +1,15 @@
+{
+  "presets": [
+    [
+      "env",
+      { "modules": false }
+    ],
+    "react"
+  ],
+  "plugins": ["transform-object-rest-spread"],
+  "env": {
+    "production": {
+      "presets": ["minify"]
+    }
+  }
+}

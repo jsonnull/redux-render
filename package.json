@@ -1,0 +1,53 @@
+{
+  "name": "redux-render",
+  "version": "0.0.1",
+  "description": "Selector component for Redux state using render props.",
+  "main": "dist/redux-render.js",
+  "module": "src/index.js",
+  "author": "Jason Nall <jsonnull@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build:umd": "cross-env BABEL_ENV=development NODE_ENV=development rollup -c -o dist/redux-render.js",
+    "build:umd:min": "cross-env BABEL_ENV=production NODE_ENV=production rollup -c -o dist/redux-render.min.js",
+    "build": "npm run build:umd && npm run build:umd:min"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsonnull/redux-render.git"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "react",
+    "reactjs",
+    "redux",
+    "render"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-minify": "^0.2.0",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "redux": "^3.7.2",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.2.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "webpack": "^3.6.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0-0 || ^16.0.0-0",
+    "redux": "^3.0.0"
+  }
+}
