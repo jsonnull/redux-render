@@ -8,8 +8,12 @@
   ],
   "plugins": ["transform-object-rest-spread"],
   "env": {
+    "development": {
+      "plugins": ["external-helpers"]
+    },
     "production": {
-      "presets": ["minify"]
+      "presets": ["minify"],
+      "plugins": ["external-helpers"]
     },
     "test": {
       "presets": ["env", "react"]
