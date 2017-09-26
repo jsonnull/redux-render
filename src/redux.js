@@ -17,21 +17,24 @@ class Redux extends React.Component {
     })
 
     // Get initial state
-    this.selectorToState()
+    const { selector } = this.props
+    const state = selector(store.getState())
+    this.selectedState = state
   }
 
   selectorToState() {
     const { selector } = this.props
     const store = this.context.reduxRenderStore
     const state = selector(store.getState())
-    if (state !== this.state) {
-      this.setState(state)
+    if (state !== this.selectedState) {
+      this.selectedState = state
+      this.forceUpdate()
     }
   }
 
   render() {
     return this.props.children(
-      this.state,
+      this.selectedState,
       this.context.reduxRenderStore.dispatch
     )
   }
