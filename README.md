@@ -2,8 +2,9 @@
 
 An alternative React binding for Redux using render props.
 
-[![build status](https://img.shields.io/travis/jsonnull/redux-render/master.svg?style=flat-square)](https://travis-ci.org/jsonnull/redux-render)
-[![npm version](https://img.shields.io/npm/v/redux-render.svg?style=flat-square)](https://www.npmjs.com/package/redux-render)
+[![Build Status](https://travis-ci.org/jsonnull/redux-render.svg?branch=master)](https://travis-ci.org/jsonnull/redux-render)
+[![Coverage Status](https://coveralls.io/repos/github/jsonnull/redux-render/badge.svg?branch=master)](https://coveralls.io/github/jsonnull/redux-render?branch=master)
+[![npm version](https://img.shields.io/npm/v/redux-render.svg)](https://www.npmjs.com/package/redux-render)
 
 ## Installation
 
