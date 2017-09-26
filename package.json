@@ -10,7 +10,7 @@
     "build:umd": "cross-env BABEL_ENV=development NODE_ENV=development rollup -c -o dist/redux-render.js",
     "build:umd:min": "cross-env BABEL_ENV=production NODE_ENV=production rollup -c -o dist/redux-render.min.js",
     "build": "npm run build:umd && npm run build:umd:min",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
