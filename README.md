@@ -26,4 +26,4 @@ const App = props => (
 )
 ```
 
-There is also a [full-fledged example](examples/) you can try.
+To see a full app, try this [example on CodeSandbox](https://codesandbox.io/s/vnk2qzov65) or [browse the example source](examples/).
