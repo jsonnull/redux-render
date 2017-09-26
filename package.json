@@ -10,7 +10,8 @@
     "build:umd": "cross-env BABEL_ENV=development NODE_ENV=development rollup -c -o dist/redux-render.js",
     "build:umd:min": "cross-env BABEL_ENV=production NODE_ENV=production rollup -c -o dist/redux-render.min.js",
     "build": "npm run build:umd && npm run build:umd:min",
-    "test": "jest --coverage"
+    "test": "jest",
+    "test:coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-minify": "^0.2.0",
     "babel-preset-react": "^6.24.1",
+    "coveralls": "^2.13.1",
     "cross-env": "^5.0.5",
     "enzyme": "^2.9.1",
     "jest": "^21.1.0",
