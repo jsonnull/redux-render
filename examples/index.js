@@ -1,19 +1,16 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import { createStore } from 'redux'
-import { Provider, Redux } from '../dist/redux-render'
+import { Provider, Redux } from 'redux-render'
 
 const initialState = {
-  mouse: {
-    x: 0,
-    y: 0
-  }
+  text: 'type here'
 }
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'MOUSE_MOVED':
-      return { ...state, mouse: { x: action.x, y: action.y } }
+    case 'UPDATE_TEXT':
+      return { ...state, text: action.text }
     default:
       return state
   }
@@ -21,26 +18,25 @@ const reducer = (state = initialState, action) => {
 
 const store = createStore(reducer)
 
-const eventToMoveAction = event => ({
-  type: 'MOUSE_MOVED',
-  x: event.nativeEvent.clientX,
-  y: event.nativeEvent.clientY
+const updateText = text => ({
+  type: 'UPDATE_TEXT',
+  text: text
 })
 
-const App = () => {
-  return (
-    <Redux selector={state => state.mouse}>
-      {(mouse, dispatch) => (
-        <div
-          style={{ height: '100vh' }}
-          onMouseMove={e => dispatch(eventToMoveAction(e))}
-        >
-          Mouse coordinates are ({mouse.x}, {mouse.y})
-        </div>
-      )}
-    </Redux>
-  )
-}
+const App = () => (
+  <Redux selector={state => state.text}>
+    {(text, dispatch) => (
+      <div>
+        <input
+          type="text"
+          value={text}
+          onChange={e => dispatch(updateText(e.target.value))}
+        />
+        <p>Value: {text}</p>
+      </div>
+    )}
+  </Redux>
+)
 
 ReactDom.render(
   <Provider store={store}>
