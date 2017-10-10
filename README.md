@@ -7,7 +7,7 @@
 React bindings for Redux using render props.
 
 ```JavaScript
-const Title = props => (
+const Title = () => (
   <Redux selector={state => state.title}>
     {title => (
       <h1>{title}</h1>
@@ -34,7 +34,7 @@ yarn add redux-render
 
 ## Examples
 
- - Controlled input ([source](examples/),[Codesandbox](https://codesandbox.io/s/vnk2qzov65))
+ - Controlled input ([source](examples/), [CodeSandbox](https://codesandbox.io/s/vnk2qzov65))
 
 ## [API](docs/API.md)
  - [`<Provider store>`](docs/API.md#provider-store)
