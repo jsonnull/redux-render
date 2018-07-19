@@ -3,7 +3,6 @@
   "version": "0.0.2",
   "description": "Selector component for Redux state using render props.",
   "main": "dist/redux-render.js",
-  "module": "src/index.js",
   "author": "Jason Nall <jsonnull@gmail.com>",
   "license": "MIT",
   "scripts": {
