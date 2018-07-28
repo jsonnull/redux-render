@@ -1,6 +1,6 @@
 {
   "name": "redux-render",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Selector component for Redux state using render props.",
   "main": "dist/redux-render.js",
   "module": "es/index.js",
