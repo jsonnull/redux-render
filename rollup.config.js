@@ -12,11 +12,22 @@ const config = {
     react: 'React',
     redux: 'Redux'
   },
-  output: {
-    format: 'umd'
-  },
   name: 'ReduxRender',
-  plugins: [
+  plugins: []
+}
+
+if (env === 'es') {
+  config.output = {
+    format: 'es'
+  }
+  config.plugins.push(babel())
+}
+
+if (env === 'development' || env === 'production') {
+  config.output = {
+    format: 'umd'
+  }
+  config.plugins.push(
     nodeResolve(),
     babel({
       exclude: '**/node_modules/**'
@@ -25,7 +36,7 @@ const config = {
       'process.env.NODE_ENV': JSON.stringify(env)
     }),
     commonjs()
-  ]
+  )
 }
 
 export default config

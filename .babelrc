@@ -15,6 +15,9 @@
       "presets": ["minify"],
       "plugins": ["external-helpers"]
     },
+    "es": {
+      "plugins": ["external-helpers"]
+    },
     "test": {
       "presets": ["env", "react"]
     }
