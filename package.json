@@ -3,13 +3,14 @@
   "version": "0.0.2",
   "description": "Selector component for Redux state using render props.",
   "main": "dist/redux-render.js",
-  "module": "src/index.js",
+  "module": "es/index.js",
   "author": "Jason Nall <jsonnull@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build:umd": "cross-env BABEL_ENV=development NODE_ENV=development rollup -c -o dist/redux-render.js",
     "build:umd:min": "cross-env BABEL_ENV=production NODE_ENV=production rollup -c -o dist/redux-render.min.js",
-    "build": "npm run build:umd && npm run build:umd:min",
+    "build:es": "cross-env BABEL_ENV=es NODE_ENV=es rollup -c -o es/redux-render.js",
+    "build": "npm run build:umd && npm run build:umd:min && npm run build:es",
     "test": "jest",
     "test:coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
@@ -18,8 +19,9 @@
     "url": "https://github.com/jsonnull/redux-render.git"
   },
   "files": [
+    "src",
     "dist",
-    "src"
+    "es"
   ],
   "keywords": [
     "react",
